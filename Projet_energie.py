@@ -795,24 +795,26 @@ if page == pages[6] :
   st.plotly_chart(fig)
 
 
+
+
+
 if page == "Introduction Machine Learning":
     st.title("Introduction Machine Learning")
     st.write("""
     La consommation énergétique en France fluctue selon plusieurs facteurs : saisonnalité, production d’énergies renouvelables,
     activité économique, etc. Pour mieux comprendre ces tendances et anticiper la consommation, nous avons utilisé des **modèles de Machine Learning**.
+    
     ## Pourquoi le Machine Learning ?
     - Identifier les **facteurs clés** influençant la consommation.
     - Prédire les besoins énergétiques pour **optimiser la gestion du réseau**.
     - Comparer plusieurs modèles pour trouver le **plus performant**.
+    
     ## Modèles utilisés
     Trois modèles de régression ont été testés :
     - **Régression Linéaire** : Modèle simple capturant des tendances linéaires.
     - **Random Forest** : Modèle basé sur des arbres de décision, efficace pour les relations complexes.
     - **Gradient Boosting** : Modèle avancé qui améliore la précision des prédictions.
-    ## Données utilisées
-    L’échantillon de données utilisé couvre une période de **janvier 2013 à janvier 2023**, avec une agrégation **par jour** au **niveau national**. Cela permet de capter les variations journalières et saisonnières de la consommation énergétique.
     """)
-
 
 if page in models.keys():
     model_name = page
@@ -885,19 +887,16 @@ if page == "Conclusion Machine Learning":
 if page == "Conclusion et ouverture":
     st.title("Conclusion et ouverture")
     st.write("""
-    ## Conclusion générale
-    L’analyse de la consommation et de la production énergétique en France a permis de mettre en évidence des tendances marquées, influencées par des facteurs saisonniers, économiques et structurels. La forte dépendance au nucléaire, combinée à une montée en puissance des énergies renouvelables, souligne l’importance d’une gestion optimisée du mix énergétique pour garantir la stabilité du réseau.
-    ## Synthèse des analyses
-    - **Analyse des tendances énergétiques** : Étude de la consommation et de la production énergétique en France.
-    - **Évaluation des modèles de prévision** : Comparaison de plusieurs techniques de Machine Learning pour prédire la consommation future.
-    ## Perspectives et ouverture
-    Pour aller plus loin, plusieurs axes d’amélioration pourraient être envisagés :
-    - **Intégration de nouvelles variables** : Prendre en compte la météo, les prix de l’électricité, ou encore les données socio-économiques.
-    - **Optimisation des modèles** : Tester des approches plus avancées comme les réseaux de neurones pour améliorer la précision des prévisions.
-    - **Application aux Smart Grids** : Utiliser ces prévisions dans un contexte de gestion intelligente du réseau pour mieux équilibrer production et consommation en temps réel.
-    En conclusion, cette étude met en évidence l’importance d’une **modélisation fine de la consommation énergétique** et ouvre la voie à des **outils d’aide à la décision** pour les acteurs du secteur de l’énergie.
+    L’analyse énergétique menée dans ce rapport met en évidence l’importance d’une prévision précise pour une **meilleure gestion du réseau électrique**.
+    
+    ## Points clés
+    - La consommation varie fortement selon les saisons et les sources d'énergie.
+    - Les modèles de Machine Learning permettent d’anticiper ces fluctuations.
+    
+    ## Vers l’avenir
+    - **Smart Grids** : L’intégration de réseaux intelligents améliorerait l’équilibre entre production et demande.
+    - **Stockage d’énergie** : Une gestion plus efficace des surplus permettrait une stabilisation accrue.
     """)
-
 
 if page == "Annexe":
     st.image('renouvelables_par_heure.png')
